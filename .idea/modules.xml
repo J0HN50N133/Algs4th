@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm4thCoursera.iml" filepath="$PROJECT_DIR$/Algorithm4thCoursera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week1_1/Week1_1.iml" filepath="$PROJECT_DIR$/Week1_1/Week1_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week1_2/Week1_2.iml" filepath="$PROJECT_DIR$/Week1_2/Week1_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week2_1/Week2_1.iml" filepath="$PROJECT_DIR$/Week2_1/Week2_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week3_1/Week3_1.iml" filepath="$PROJECT_DIR$/Week3_1/Week3_1.iml" />
+    </modules>
+  </component>
+</project>
