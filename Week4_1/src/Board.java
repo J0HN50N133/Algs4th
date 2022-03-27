@@ -1,5 +1,3 @@
-import edu.princeton.cs.algs4.StdRandom;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -146,16 +144,17 @@ public class Board {
 
     // a board that is obtained by exchanging any pair of tiles
     public Board twin() {
-        int x1;
-        int y1;
-        int x2;
-        int y2;
-        do{
-            x1 = StdRandom.uniform(n);
-            y1 = StdRandom.uniform(n);
-            x2 = StdRandom.uniform(n);
-            y2 = StdRandom.uniform(n);
-        }while ((x1 == x2 && y1 == y2) || board[x1][y1] == 0 || board[x2][y2] == 0);
+        // 注意这里要immutable
+        int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+        for (int i = 0; i < n*n; i++) {
+            x1 = x(i);
+            y1 = y(i);
+            x2 = x(i + 1);
+            y2 = y(i + 1);
+            if (board[x1][y1] != 0 && board[x2][y2] != 0){
+                break;
+            }
+        }
         exch(x1, y1, x2, y2);
         Board board = new Board(this.board);
         exch(x1, y1, x2, y2);
