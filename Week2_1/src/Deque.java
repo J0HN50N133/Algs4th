@@ -36,6 +36,9 @@ public class Deque<Item> implements Iterable<Item> {
         private Item remove() {
             this.prev.next = this.next;
             this.next.prev = this.prev;
+            // avoid memory leak
+            this.next = null;
+            this.prev = null;
             return this.val;
         }
 
@@ -117,10 +120,6 @@ public class Deque<Item> implements Iterable<Item> {
                 methodName,
                 expect == null ? "null" : expect.toString(),
                 actual == null ? "null" : actual.toString());
-    }
-
-    private void PrintNodeSize() {
-        Node node = new Node();
     }
 
     // unit testing (required)
